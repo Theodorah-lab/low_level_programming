@@ -2,19 +2,19 @@
 
 /**
  * add - adds two integers
- * @f1: integer 1
- * @f2: integer 2
+ * @n1: integer 1
+ * @n2: integer 2
  *
  * Description: give two integers, returns sum
  *
  * Return: sum
  */
 
-int add(int f1, int f2)
+int add(int n1, int n2)
 {
 	int sum;
 
-	sum = f1 + f2 ;
+	sum = n1 + n2;
 
 	return (sum);
 }
