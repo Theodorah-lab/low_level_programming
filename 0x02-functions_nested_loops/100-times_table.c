@@ -9,15 +9,15 @@
  * Return: void
  */
 
-void print_times_table(int f)
+void print_times_table(int n)
 {
 	int row, column, product;
 
-	if (f >= 0 && f < 15)
+	if (n >= 0 && n < 15)
 	{
-		for (row = 0; row <= f; row++)
+		for (row = 0; row <= n; row++)
 		{
-			for (column = 0; column <= f; column++)
+			for (column = 0; column <= n; column++)
 			{
 				product = row * column;
 
