@@ -8,32 +8,32 @@
  */
 int main(void)
 {
-	long int k;
-	long int zec;
+	long int n;
+	long int max;
 	long int l;
 
-	k = 612852475143;
+	n = 612852475143;
 	max = -1;
 
-	while (k % 2 == 0)
+	while (n % 2 == 0)
 	{
-		zec = 2;
-		k /= 2;
+		max = 2;
+		n /= 2;
 	}
 
-	for (l = 3; l <= sqrt(k); l = l + 2)
+	for (l = 3; l <= sqrt(n); l = l + 2)
 	{
-		while (k % l == 0)
+		while (n % l == 0)
 		{
-			zec = l;
-			k = k / l;
+			max = l;
+			n = n / l;
 		}
 	}
 
-	if (k > 2)
-		zec = k;
+	if (n > 2)
+		max = n;
 
-	printf("%ld\n", zec);
+	printf("%ld\n", max);
 
 	return (0);
 }
