@@ -32,7 +32,7 @@ int _atoi(char *s)
 				number = -number;
 			m = m * 10 + number;
 			f = 1;
-			if (s[k + 1] < '0' || s[i + 1] > '9')
+			if (s[k + 1] < '0' || s[k + 1] > '9')
 				break;
 			f = 0;
 		}
@@ -42,5 +42,5 @@ int _atoi(char *s)
 	if (f == 0)
 		return (0);
 
-	return (n);
+	return (m);
 }
