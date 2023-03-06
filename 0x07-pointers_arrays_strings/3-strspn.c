@@ -1,22 +1,35 @@
-#include "holberton.h"
-#include <stdio.h>
-
 /**
- * main - check the code for ALX School students.
+ * _strspn - a function that gets the
+ *           length of a prexif substring
  *
- * Return: Always 0.
+ * @s: pointer to string input
+ * @accept: substring prefix to look for
+ *
+ * Return: the number of bytes in the initial segment
 */
 
-int main(void)
+unsigned int _strspn(char *s, char *accept)
 {
-	char *s = "hello, world";
-	char *p = "helloIhello";
-	char *f = "oleh";
-	unsigned int m, z;
+	int m, n, f;
 
-	m = _strspn(s, f);
-	z = _strspn(p, f);
-	printf("%u\n", m);
-	printf("%u\n", z);
-	return (0);
+	m = 0;
+	while (s[m] != '\0')
+	{
+		n = 0;
+		f = 1; /*flag status*/
+		while (accept[n] != '\0')
+		{
+			if (s[m] == accept[n])
+			{
+				f = 0; /*success*/
+				break;
+			}
+			n++;
+		}
+		if (f == 1)
+			break;
+		m++;
+	}
+
+	return (m);
 }
