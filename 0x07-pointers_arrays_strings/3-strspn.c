@@ -14,7 +14,7 @@ int main(void)
 	char *f = "oleh";
 	unsigned int m, z;
 
-	n = _strspn(s, f);
+	m = _strspn(s, f);
 	z = _strspn(p, f);
 	printf("%u\n", m);
 	printf("%u\n", z);
