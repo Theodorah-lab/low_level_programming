@@ -4,22 +4,22 @@
  * @n:int
  * Return:int
  */
-int factorial(int k)
+int factorial(int n)
 {
-	int y;
+	int k;
 
-	if (k == 0)
+	if (n == 0)
 	{
 		return (1);
 	}
-	else if (k < 0)
+	else if (n < 0)
 	{
 		return (-1);
 	}
 	else
 	{
-		y = k * factorial(k - 1);
+		k = n * factorial(n - 1);
 	}
-			return (y);
+			return (k);
 
 }
