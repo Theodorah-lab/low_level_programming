@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 	length = 0;
 	for (l = 0; l < ac; l++)
 	{
-		for (m = 0; av[l][m] != '\0'; j++)
+		for (m = 0; av[l][m] != '\0'; m++)
 			length++;
 		length++;
 	}
@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 
-	k = 0;
+	n = 0;
 	for (l = 0; l < ac; l++)
 	{
 		for (m = 0; av[l][m] != '\0'; m++)
