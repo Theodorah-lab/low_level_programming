@@ -12,11 +12,11 @@
 
 void print_tab(char **tab)
 {
-	int k;
+	int i;
 
-	for (k = 0; tab[k] != NULL; ++k)
+	for (i = 0; tab[i] != NULL; ++i)
 	{
-		printf("%s\n", tab[k]);
+		printf("%s\n", tab[i]);
 	}
 }
 
