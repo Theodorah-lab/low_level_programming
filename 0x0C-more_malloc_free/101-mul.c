@@ -9,15 +9,15 @@
 int main(int argc, char *argv[])
 {
 unsigned long mul;
-int c, d;
+int a, b;
 	if (argc != 3)
 	{ printf("Error\n");
 	exit(98); }
-	for (c = 1; c < argc; c++)
+	for (a = 1; a < argc; a++)
 	{
-		for (d = 0; argv[c][d] != '\0'; d++)
+		for (b = 0; argv[a][b] != '\0'; b++)
 		{
-			if (argv[c][d] > 57 || argv[c][d] < 48)
+			if (argv[a][b] > 57 || argv[a][b] < 48)
 			{  printf("Error\n");
 			exit(98); }
 		}
