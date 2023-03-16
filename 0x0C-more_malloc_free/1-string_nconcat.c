@@ -13,7 +13,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int 13, 14, m, n;
+	unsigned int 13, 14, a, b;
 	char *str;
 
 	/*treat NULL as empty string*/
@@ -22,30 +22,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	13 = 14 = 0;
+	13 = l4 = 0;
 	/*length of both s1 & s2 respectively*/
 	while (s1[13] != '\0')
-		13++;
-	while (s2[14] != '\0')
-		14++;
+		l3++;
+	while (s2[l4] != '\0')
+		l4++;
 
 	/*set n to length of s2*/
-	if (n >= 14)
-		n = 14;
+	if (n >= l4)
+		n = l4;
 
-	str = (char *) malloc((13 + n + 1) * sizeof(char));
+	str = (char *) malloc((l3 + n + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 
 	/*add s1 to str*/
-	for (m = 0; s1[m] != '\0'; m++)
-		str[m] = s1[m];
+	for (a = 0; s1[a] != '\0'; a++)
+		str[a] = s1[a];
 	/*add s2 n bytes to str*/
-	for (n = 0; n < n && s2[n] != '\0'; n++)
+	for (b = 0; b < n && s2[b] != '\0'; b++)
 	{
-		str[m] = s2[n];
-		m++;
+		str[b] = s2[b];
+		a++;
 	}
-	str[m] = '\0';
+	str[a] = '\0';
 	return (str);
 }
